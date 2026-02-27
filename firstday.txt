@@ -1,0 +1,235 @@
+Single User Single Tasking [DOS]
+Single User Multitasking [Win]
+Multiuser Multitasking [Linux/Unix]
+Embedded OS [Robotics]
+Real Time OS [Radar]
+---------------
+Open Source:
+
+1) Free to study
+2) Free to modify
+3) Free to dist.
+_______________
+
+SHELLs:
+````````
+1) SH 		[Shell]
+2) KSH		[ Korn Shell ] - Unix Script
+3) CSH		[ C lang shell ]
+4) TCSH		[ Turbo C shell ]
+5) BASH		[ KSH + TCSH ]
+
+______________________________________
+Introduction of Linux
+``````````````````````
+Linux was developed by Mr. Linus Torvalds in 17th Sep. 1991. 
+Linux is an open source OS.
+Linux was developed under GPL(General Public License).
+Linux is a case sensitive OS.
+Linux use its own KERNEL & kernel is core part of OS.
+Linux use a shell name “BASH” 
+SHELL- Shell is a platform which is used by the user to providing instructions to the hardware via kernel.
+BASH- Bourne Again Shell.
+To install any OS, It required an installer. Linux use an installer named “ANACONDA”.
+To boot any system, It required a boot loader. And Linux use a boot loader named “GRUB(Grand Unified Boot loader)”.
+Linux is  multiuser multitasking OS.
+Linux operate in CLI (Command Line Interface) and GUI (Graphical User Interface) both.
+In Linux GUI is called X-Windows.
+X-Windows has two types-
+	a) GNOME (Global Network Object Model Environment)
+	b) KDE (Kool Desktop Environment)
+KDE: The KDE GUI is equipped with everything users typically need, including a file manager, window manager, help tool and system configuration tool. 
+In Linux everything is file.
+Whenever we create a file in Linux, system provide an unique number to each & every file for system identification is called “I-nod number” or “Index number”.
+The super user of Linux is “root”.
+The parent directory of Linux is “/” & directly or indirectly all the files & folders are related with “/”.
+Linux was developed by using two programs: a) C Language 
+                                           b) Unix script  
+
+
+
+
+
+
+
+Installation:
+``````````````
+Recommended: 20G
+Minimal: 8G
+
+Partitions:
+````````````
+1) / [ Parent Partition ] : 20G+
+
+2) /boot [ Booting Config ]GRUB : 512MB+|58M
+
+3) SWAP [ RAM x 2 ] = 8G [Virtual Mem]
+	  phy
+	  mem
+	  4G
+
+
+
+
+
+
+
+----------------------
+/		[ Parent Partition ]
+/bin 		[ Binary ]
+/sbin 		[ Super Binary ]
+/usr		[ Critical - All the system commands ]
+/dev		[ Devices ]
+/etc		[Important - System Config & System Services ]
+/lib & /lib64 	[ Library ]
+/media, /mnt, /opt, /misc 	[ Empty ]
+/home		[Home Dir of Normal Users]
+/root		[Home Dir of Super User]
+/proc		[Processes]
+/srv		[Only Third Party Services]
+/sys		[System Driver Database]
+/tmp		[temp]world writable dir
+/var		[Variable - e.g. : logs etc.. ]
+-----------------------------------------------------------
+Terminal/Shell/Console:
+-----------------------
+root@localhost:~# 
+user  hostname
+name
+~ = /root
+Tilde [~] : Home dir of current loggedin user.
+
+root [ /root ]
+natasha [ /home/natasha ]
+
+# : LoggedIn as root
+$ : LoggedIn as normal user
+--------------------
+Basic Commands:
+----------------
+PATH:
+`````
++ Absolute [ /home/natasha/Desktop ] 
++ Relative [ Desktop ]
+
+
+
+
+
+
+
+pwd	[print working dir]
+cd 	[ Change Dir ]
+	# cd path
+	# cd .. [eg: cd ../../]
+	# cd - [Old dir] 
+	# cd [ Home Dir ]
+ls	[ List of dir contents ]
+	# pwd
+	/
+	# ls /root/Desktop
+mkdir dirname 	[Make Dir]
+mkdir dir1 dir2 
+mkdir path/dirname
+mkdir dir{1..10}
+
+touch filename 	[To create a new blank file]
+
+
+
+
+
+
+
+
+
+
+
+cat > filename	[To create a new file with text]
+	e.g: # cat > marvels
+		TEXT
+		[ctrl+d]-> exit
+
+
+
+
+
+
+
+
+> [Standard output to the program]
+< [Standard input to the program]
+
+cat filename	[ To show the text of file]
+
+
+
+
+
+
+
+cat >> file	[ Append the text in existing file.]
+		e.g: # cat >> marvels
+		TEXT2
+		[ctrl+d]-> exit
+
+
+
+
+
+Assignment#1: Manual Partitioning and Ubuntu Installation
+
+Requirements / Tools Needed:
+- virtual machine (e.g., VirtualBox, VMware) with at least 40–60 GB free disk space
+- Latest Ubuntu Desktop ISO (24.04 LTS or newer)
+
+Complete the Installation as Instructions:
+
+Create the Following Partition Scheme:
+
+1. 
+Mount point: /boot
+Recommended Size: 1 GB
+Filesystem: xfs
+
+2. 
+Mount point: /
+Recommended Size: 60 GB
+Filesystem: xfs
+
+3. 
+Recommended Size: 4 GB
+Filesystem: SWAP
+
+
+Deliverables (Submit as PDF or document):
+
+1. Screenshot of the manual partitioning screen during creation (showing all three partitions and their settings).
+2. Any problems you faced + how you solved them (or what the installer warned about).
+
+Submission as:
+YourName_Ubuntu_Partitioning_Assignment1.pdf 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
