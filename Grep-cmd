@@ -1,0 +1,41 @@
+Grep with RegEx:
+````````````````
+[]		: Bracketed char class
+{n}		: Match exactly n times
+{n,}		: Match at least n times
+{n,m}		: Match at least n but not more than m times
+
+
+Charsets []: 
+````````````
+[0-9]
+[a-z]
+[A-Z]
+[0-9a-zA-Z]
+
+Charsets [] with {}: 
+`````````````````````
+[0-9]{10}
+[a-z]{1,12}
+[A-Z]{10,}
+[0-9a-zA-Z]{10,20}
+
+
+
+
+
+
+
+
+grep "[a-z]" data.txt
+grep "[A-Z]" data.txt
+grep "[0-9]" data.txt
+grep "[a-zA-Z0-9]" data.txt
+
+grep "^[A-Z]" data.txt
+grep "[A-Z]$" data.txt
+grep "^[A-Z].*" data.txt
+
+grep -Eo "[0-9]{10}" data.txt
+egrep -o "[0-9]{10,}" data.txt
+egrep -o "[0-9]{10,12}" data.txt
