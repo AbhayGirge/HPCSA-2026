@@ -1,0 +1,87 @@
+more: read a files content page by page
+	'q' to quit.
+
+sort & uniq
+
+w : who is loggedin and what they are currently doing + idle time + load info
+
+
+
+
+
+loginctl
+
+
+file types
+````````````
+dir		[d]
+regular files	[f, -]
+block		[b]
+pipe		[p]
+char		[c]
+link		[l]
+
+
+# ls -l : To check/list dir content in detail.
+
+LINKs:
+``````
+1) SOFT (SYMBOLIC):
+
+# ln -s /root/hp/file1 /root/hp/foo/slink
+
+# ln : link
+-s : soft link
+/root/hp/file1 : Orig file path
+/root/hp/foo/slink : Soft Link path
+
+# unlink /root/hp/foo/slink
+
+
+
+2) HARD
+````````
+# ln /root/hp/file1 /root/hp/foo/hlink
+
+# ln : link
+
+/root/hp/file1 : Orig file path
+/root/hp/foo/hlink : Hard Link path
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+du:
+```
+Disk usage
+
+# du -sch /usr
+
+-s : size
+-c : count
+-h : human readable format
+
+
