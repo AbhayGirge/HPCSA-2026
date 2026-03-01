@@ -1,0 +1,64 @@
+_______________________________________
+
+| (pipe sign):
+``````````````` 
+cmd1 | cmd2
+o/p---->i/p
+
+# wc -l data.txt
+# cat data.txt | wc -l
+
+
+grep: Text parsing 
+`````
+Used to search string/word/patterns(RegEx) in text. 
+
+SYNTAX:
+grep "string/word/pattern" filename
+cat filename | grep "string/word/pattern"
+
+
+grep "a" data.txt
+
+Multiple strings/patterns:
+```````````````````````````` 
+grep "a\|o\|e" data.txt
+
+Inverse grep:
+`````````````
+grep -v "o" data.txt
+grep -v "a\|o\|e" data.txt
+
+ignore-case:
+````````````
+grep -i "dh" data.txt
+
+After & Before match:
+`````````````````````
+grep -A 2 "dh" data.txt
+grep -B 2 "dh" data.txt
+grep -B 2 -A 3 "dh" data.txt
+
+Exact(only match) Match:
+````````````````````````
+grep -o "dh" data.txt
+
+
+
+Metachar:
+```````````
+caret ^ : start of the line
+
+	grep "^a" data.txt
+
+Dollar $ : End of the line
+
+	grep "^a" data.txt
+
+dot . : Anything but one/single position
+
+	grep "^s....$" data.txt
+
+wildcard *: everything with no limits
+
+	grep "^s.*" data.txt
