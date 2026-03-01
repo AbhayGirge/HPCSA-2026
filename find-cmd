@@ -1,0 +1,45 @@
+find:
+`````
+Syntax:
+
+find <path_where_to_find> -attrib <what_to_find>
+
+
+1) name:
+````````
+find . -name pop
+find . -iname pop
+find ~ -name "glassdoor*"
+find ~ -name "*ssdoor*"
+
+* : Wildcard
+
+2) User:
+````````
+find /home -user "nix"
+
+3) Size:
+`````````
+find ~ -size 2k
+	     +2k
+	     -2k	k,M,G
+find ~ -size +2M -size -10M
+	
+4) index number:
+````````````````
+find ~ -inum 3566723647
+
+5) Type:
+````````
+find ~ -type d
+find ~ -type f
+find ~ -type c
+find ~ -type b
+
+6) Empty:
+`````````
+find ~/hp/ -empty
+
+7) delete (only delete empty data)
+````````````````````````````````````
+find ~ -empty -delete
