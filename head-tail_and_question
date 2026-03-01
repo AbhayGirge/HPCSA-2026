@@ -1,0 +1,73 @@
+tail [print the output from the end of file] - Default 10 lines
+
+# tail file
+# tail -n 5 file
+[-n : number of lines]
+# tail -5 file
+
+head [Top line] Default 10 lines
+
+# head file
+# head -n 5 file
+# head -5 file
+
+
+wc [Word Count]
+---------------
+# wc -l filename
+_________________________________________
+1. Print your current working directory.
+
+
+2. Change to your home directory using three different methods.
+
+3. Go one level up, then go two levels up in a single command.
+
+4. Return to the directory you were in before the last cd command.
+
+5. List all files and folders in the current directory.
+
+6. List all files including hidden files (those starting with .).
+
+7. Create a new directory called "practice".
+
+8. Create an empty file named "notes.txt" inside the "practice" folder (two ways).
+
+9. Create a file called "animals.txt" and write 4 animal names into it.
+
+10. Add two more animal names to the existing animals.txt file.
+
+11. Display the complete contents of animals.txt.
+
+12. Show today's date first in normal format, then in YYYY-MM-DD format.
+
+13. Clear the terminal screen (using two different methods).
+
+14. Create a file hello.txt and copy it to the practice folder.
+
+15. Copy the entire "practice" folder to a new folder called "backup".
+
+16. Rename hello.txt to welcome.txt.
+
+17. Move animals.txt from current directory into the practice folder.
+
+18. Create a hidden folder called ".private" and a hidden file ".secret" inside it.
+
+
+19. Delete (remove) the file welcome.txt safely.
+
+20. Delete the entire "practice" folder and everything inside it.
+
+21. Create Directories like shown below in single command.
+cdac
+├── dac
+│   ├── l1
+│   └── l2 
+├── dbda
+│   ├── l3 
+│   └── l4 
+└── ditiss
+    ├── l5
+    └── l6
+
+22. Write a single command that creates a directory, creates 10000 files under it
