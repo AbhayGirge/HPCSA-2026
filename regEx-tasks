@@ -1,0 +1,102 @@
+
+
+
+# File: indian_army.txt
+1 PARA SF
+9 PARA SF
+21 PARA SF
+4 PARA SF
+10 Para Commando
+Maratha Light Infantry
+Rajput Regiment
+Sikh Regiment
+Jat Regiment
+Dogra Regiment
+Garhwal Rifles
+Kumaon Regiment
+Assam Regiment
+BIHAR Regiment
+Jammu and Kashmir Rifles
+Naga Regiment
+11 Gorkha Rifles
+7 Gorkha Rifles
+Ladakh Scouts
+Arunachal Scouts
+Sikkim Scouts
+
+
+
+
+# File: indian_airforce.txt
+No. 1 Squadron (Tigers)
+No. 3 Squadron (Cobras)
+No. 4 Squadron (Oorials)
+No. 6 Squadron (Dragons)
+No. 7 Squadron (Battle Axes)
+No. 9 Squadron (Wolfpack)
+No. 15 Squadron (Flying Lances)
+No. 17 Squadron (Golden Arrows)
+No. 18 Squadron (Flying Bullets)
+No. 20 Squadron (Lightnings)
+MiG-21 Bison
+Rafale
+Su-30 MKI
+Tejas Mk1
+Tejas Mk1A
+Mirage 2000
+Jaguar
+Mi-17 V5
+Apache AH-64E
+Chinook CH-47F
+
+
+
+
+
+# File: ranks.txt
+General
+Lieutenant General
+Major General
+Brigadier
+Colonel
+Lieutenant Colonel
+Major
+Captain
+Lieutenant
+Second Lieutenant
+Flying Officer
+Flight Lieutenant
+Squadron Leader
+Wing Commander
+Group Captain
+Air Commodore
+Air Vice Marshal
+Air Marshal
+Air Chief Marshal
+Marshal of the Indian Air Force
+
+
+
+
+
+
+
+
+
+
+
+Lab Questions: Jai Hind! 🇮🇳																					
+
+1. Show all lines from indian_army.txt that contain the word "Regiment" (case-sensitive)
+2. List all Para SF units from indian_army.txt (lines containing "PARA SF")
+3. From indian_army.txt, show regiments that have exactly two words in their name (like "Jat Regiment")
+4. Count how many squadrons in indian_airforce.txt have a number less than 10 (No. 1 to No. 9)
+5. Display all lines from indian_airforce.txt that contain either "Tejas" or "Rafale"
+6. From ranks.txt, show all Army ranks that contain the word "General" (case-insensitive)
+7. List all Air Force officer ranks from ranks.txt that start with "Air" (case-sensitive)
+8. From indian_airforce.txt, show aircraft names that contain a hyphen (-)
+9. From indian_army.txt, display lines that end with the word "Scouts" (case-insensitive)
+10. From indian_airforce.txt, show only the modern fighter aircraft lines that contain any of these words: Rafale, Tejas, Su-30 (case-insensitive)
+
+
+
