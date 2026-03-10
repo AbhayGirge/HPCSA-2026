@@ -1,0 +1,49 @@
+telnet: 
+```````Linux-Linux || Linux-Windows
+
+CLI based network protocol and application used to connect to and manage remote computers or network devices (like routers/switches) over TCP/IP
+
+Port: 23
+
+ON SERVER:
+````````````
+1) Install package:
+````````````````````
+$ sudo apt install telnetd -y
+
+Edit the config file:
+vim /etc/inetd.conf
+
+Go to line & uncomment it:
+telnet  stream  tcp  nowait  telnetd  /usr/sbin/tcpd  /usr/sbin/in.telnetd
+
+:wq
+
+2) Start the service:
+``````````````````````
+$ sudo systemctl restart inetd
+
+$ sudo lsof -i:23
+
+3) Access the remote machine via telnet:
+`````````````````````````````````````````
+$ telnet x.x.x.x
+
+Trying 192.168.81.25...
+Connected to 192.168.81.25.
+Escape character is '^]'.
+
+Linux 6.11.0-26-generic (server06) (pts/1)
+
+server06 login: username
+password: *******
+
+
+ON CLIENT:
+```````````
+Install client side package:
+
+$ sudo apt install telnet -y
+
+
+
