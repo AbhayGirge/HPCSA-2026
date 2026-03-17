@@ -1,4 +1,4 @@
-MONITORING:
+MONITORING(&mandatory):
 ```````````
 https://www.splunk.com/en_us/training/free-courses/overview.html
 	- Intro to Splunk
