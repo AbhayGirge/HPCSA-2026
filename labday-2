@@ -1,0 +1,322 @@
+# print("Armstrong numbers between 1 and 1000 are:")
+
+# for num in range(1, 1001):
+#     digits = str(num)
+#     order = len(digits)
+#     sum_of_powers = 0
+    
+#     for d in digits:
+#         sum_of_powers += int(d) ** order    
+    
+#     if num == sum_of_powers:
+#         print(num)
+
+
+    
+    
+    
+#QUESTION 8
+
+# age1=int(input("Enter your age: "))
+# age2=int(input("Enter your age: "))
+# age3=int(input("Enter your age: "))
+
+# oldest = max(age1,age2,age3)
+# youngest= min(age1,age2,age3)
+# print(f"The oldest is {oldest} years")
+# print (f"the youngest is {youngest} years")
+
+#QUESTION 9
+# held=int(input("Enter the total number of classes: "))
+# att=int(input("Enter the classes attended: "))
+
+# if (att/held)*100>75:
+#     print("Your eligible")
+# else:
+#     print("not")
+
+# s1=int(input("Enter the len of A"))
+# s2=int(input("Enter the len of B"))
+# s3=int(input("Enter the len of C"))
+
+# if s1+s2>s3:
+#     print("Valid")
+# great = max(s1,s2,s3)
+# if s1+s2 >  great:
+#     print(f"valid")
+# elif s2+s3 > great:
+#     print(f"valid")
+# elif s3+s1 > great:
+#     print(f"valid")
+# else:
+#     print("InValid triange")
+
+# QUESTION 
+# balance=10000
+# while True:
+    
+#     option=input("Enter w for withdraw.\n Enter d for deposit.\n Enter s for show balance.\n Enter e for Exit.\n option : ")
+#     if option == "w":
+#         w=float(input("Enter the amount you want withdraw from availaible balance: "))
+#         if w > balance:
+#             print("Insufficient balance.")
+#         else:
+#             wbal=balance-w
+#             print(f"Successfully debited {w} and Your Current balance is {wbal}")
+#             balance=wbal
+#     elif option == "d":
+        
+#         d=float(input("Enter the Amount you want to Deposit: "))
+#         dbal= balance + d
+#         print(f"You have successfully credited {d} INR. Your current balance is {dbal}")
+#         balance=dbal
+        
+#     elif option == "b":
+#         print(f"balance is {balance}")    
+#     elif option == "e":
+#         print("Exiting")
+    
+#         break
+        
+        
+# for j in range(1,11):
+    
+#     for i in range(1,11):
+#         print(f"{j}*{i} = ",{j*i})
+        
+# num=int(input("Enter the number: "))
+# for i in range(1,num+1,1):
+#     sum=0
+#     sum=sum+i
+#     print(sum)
+    
+    
+ 
+# def get_sum(num1):
+#    add=0
+#    for i in range(2,num1,2):
+#       add=add+i
+#    return add
+
+
+# # QUESTION 10
+# num=int(input("Enter the number : "))
+# # new_sum=get_sum(num)
+# # print(new_sum)
+
+# a=0
+# b=1
+# print("Fibonacci Se: ")
+# while a <= num:
+#     print(a, end=" ")
+#     c=a+b
+#     a=b
+#     b=c
+
+    
+    
+#WRITE A python code to print (take 'n' input)
+
+# star=int(input("Enter the number of stars: "))
+
+# for i in star:
+#     print(i)
+
+# n=int(input("ENter the no. of stars: "))
+# for i in range(1, n+1):
+    
+#     for k in range(1, i+1):
+        
+#         print("*", end=" ")
+#     print()
+    
+    
+# n=int(input("ENter the no. of stars: "))
+# for i in range(1, n+1):
+    
+#     for j in range(1,i+1):
+        
+#         print("*", end=" ")
+#     print()
+    
+    
+# t=input("Enter the alphabets: ")
+# for i in range(len(t)):
+#     print(t[i:])
+
+num=int(input("Enter a number: "))
+:
+#     digits = str(num)
+#     order = len(digits)
+#     sum_of_powers = 0
+    
+#     for d in digits:
+#         sum_of_powers += int(d) ** order    
+    
+#     if num == sum_of_powers:
+#         print(num)
+
+
+
+"""
+1) Write a Python function that takes a number as a parameter
+ and  returns whether it is divisible by 11 or not
+
+2) Write a function called circle_area that takes the radius of a circle as a parameter 
+and returns the area of the circle.
+
+3) Write a function called fuel_cost 
+that takes a distance as a required argument, 
+km_per_litre (default 50 km/l) and cost_per_litre (default 60 rs a litre) as optional
+ arguments. The function should return the cost 
+fuel_cost = distance/km_per_litre*cost_per_litre 
+
+"""
+#1
+# def fun(num):
+    
+#     if num%11==0:
+#         return True
+#     else:
+#         return False
+        
+# mun=fun(22)
+# if mun==True:
+#     print("True, The number is divisible by 11.")
+# else:
+#     print("False, The number is not Divisible")
+    
+
+# def circle_area(rar):
+#      #rar = float(input("Enter the radius of Circle: "))
+#      area=3.14*(rar*rar)
+     
+#      print("The area is :",area)
+    
+# circle_area(6)
+
+# def fuel_cost(km_per_litre=50,cost_per_litre=60):
+#    return distance/km_per_litre*cost_per_litre
+# distance=1000
+# rev_fuel= fuel_cost(km_per_litre=100,cost_per_litre=100) 
+# print(f"Your fuel cost :{rev_fuel} Rs/litre ")
+# fuel_cost()
+
+#1) Take a nu. from the user and print sum from 1 to that number
+# 2) Take a number from the user and print all Odd numbers from 1 to that number 
+# 3) Take a number from the user and print all Even numbers from 1 to that number 
+# 4) Take a number from the user and print multiplication table from 1 to 10 for that number    
+# 5) A shop will give discount of 10% if the cost of purchased quantity is more than 1000.
+# Ask user for quantity
+# # Suppose, one unit will cost 100.
+# for variable in range(start,stop,step):
+#    body of for loop
+
+# def get_sum(num1):
+#    add=0
+#    for i in range(1,num1                                                                                                                                                            +1,1):
+#       add=add+i
+#    return add
+
+# num=int(input("Enter the number : "))
+# new_sum=get_sum(num)
+# print(new_sum)
+
+# 2) Take a number from the user and print all Odd numbers from 1 to that number 
+# def get_odd(num1):
+#    num=0
+#    for i in range(1,num1,1):
+#      if i%3==0:
+#         print(i)
+#    return(i) 
+
+# num=int(input("Enter the number : "))
+# # new_sum=get_odd(num)
+# # print(new_sum)
+# for i in range(1,num,2):
+   
+#    # if i%3==0:
+#    #    i+=1
+   
+#    print(f"The number is",i)
+      
+      
+# num=int(input("Enter the number : "))
+# for i in range(1,num,1):
+#    if i%2==0:
+#       print(f"The number is",i)
+      
+# num=int(input("Enter the number : "))
+# for i in range(1,11):
+#       table=num*i
+#       print(f"{num}*{i}= ",table)
+      
+# 5) A shop will give discount of 10% if the cost of purchased quantity is more than 1000.
+# Ask user for quantity
+# # Suppose, one unit will cost 100.
+
+# pur=int(input("Enter Quantity You Purchased"))
+
+# if pur>1000:
+#    dis=10/100*(pur)
+#    print(f"the discount is {dis}")
+# else:
+#    print("The quantity is less than 1000")
+   
+   
+       
+#QUESTION 8
+
+# age1=int(input("Enter your age: "))
+# age2=int(input("Enter your age: "))
+# age3=int(input("Enter your age: "))
+
+# oldest = max(age1,age2,age3)
+# youngest= min(age1,age2,age3)
+# print(f"The oldest is {oldest} years")
+# print (f"the youngest is {youngest} years")
+
+#QUESTION 9
+# held=int(input("Enter the total number of classes: "))
+# att=int(input("Enter the classes attended: "))
+
+# if (att/held)*100>75:
+#     print("Your eligible")
+# else:
+#     print("not")
+
+# s1=int(input("Enter the len of A"))
+# s2=int(input("Enter the len of B"))
+# s3=int(input("Enter the len of C"))
+
+# if s1+s2>s3:
+#     print("Valid")
+# great = max(s1,s2,s3)
+# if s1+s2 >  great:
+#     print(f"valid")
+# elif s2+s3 > great:
+#     print(f"valid")
+# elif s3+s1 > great:
+#     print(f"valid")
+# else:
+#     print("InValid triange")
+
+# QUESTION 
+# balance=10000
+# while True:
+    
+#     option=input("Enter w for withdraw.\n Enter d for deposit.\n Enter s for show balance.\n Enter e for Exit.\n option : ")
+#     if option == "w":
+#         w=float(input("Enter the amount you want withdraw from availaible balance: "))
+#         if w > balance:
+#             print("Insufficient balance.")
+#         else:
+#             wbal=balance-w
+#             print(f"Successfully debited {w} and Your Current balance is {wbal}")
+#             balance=wbal
+#     elif option == "d":
+        
+#         d=float(input("Enter the Amount you want to Deposit: "))
+#         dbal= balance + d
+#         print(f"You have successfully credited {d} INR. Your current balance is {dbal}")
+#         balance=dbal
