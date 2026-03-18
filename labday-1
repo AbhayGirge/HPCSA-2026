@@ -1,0 +1,73 @@
+#QUESTION 1
+# a = int(input("Enter a number: "))
+# b = int(input("Enter a number: "))
+
+# print(f"Addition is: {a+b}")
+# print(f"Square of 1st number: {a*a}")
+# print(f"The First Number raised to second number is : {a**b}")
+
+#QUESTION 2
+# sname=input("Enter the stock name: ")
+# bprice=int(input("Enter the  buy price: "))
+# sprice=int(input("Enter the selling price: "))
+# nunits=int(input("Enter the number of units: "))
+
+# prof=sprice-bprice
+# print(f"The profit of {sname} is {prof} INR")
+# print(f"The profit in Percentage is : {(prof*100)/bprice}%")
+
+
+# #QUESTION 3
+# n=input("Enter you name: ")
+# s=float(input("Enter your salary: "))
+# inc=float(input("Enter the increment percentage: "))
+# ns= ((s*inc)/100 +s) 
+
+
+
+#QUESTION 4
+# height=float(input("Enter your height in centemeter: "))
+
+# # print(f"Your height in cms is :")
+# print(f"Your height in feet is : {height*0.0328084} Ft and inches is {height*0.0328084*12} inches")
+
+
+
+#question 5
+# print(f"The Ruppes is {int(input("Enter the dollars: "))*82} INR")
+
+#QUESTION 6
+# src=input("Enter the source : ")
+# des=input("Enter the destination : ")
+# fair=int(input("fare in INR "))
+# dis=int(input("Enter the Discount Amount: "))
+
+# print(f"Fare from {src} to {des} is {fair} INR after applied discount of {dis} % it is {( fair - (fair*dis)/100)} INR")
+
+#QUESTION 7
+
+# num=int(input("Enter the the number : "))
+# rem=num%5
+# if rem <=2:
+#     print(f"nearest number divisible by 5 is :{num-rem}")
+# else:
+#     print(f"nearest number divisible by 5 is :{num+(5-rem)}")
+
+
+# input = "Hello, This is a Hpcsa Lab"
+# count=0
+# for i in input:
+#     if i.isupper():
+#         count+=1
+        
+# print(count)
+
+# a, b, c=int(input("Enter a Number: ")).split()
+
+for i in range (0,1000):
+    i+=i
+    a=i.split()
+    b=i.split()
+    c=i.split()
+    
+    abc= len
