@@ -1,0 +1,40 @@
+#!/bin/bash
+red='\033[0;31m'
+green='\033[0;32m'
+end='\033[0m'
+function help(){
+                figlet "A C C I O" | lolcat
+                echo "+----------------------------------+"
+                echo "| -h/--help : help or usage        |"
+                echo "| -i FILENAME: Provide IPs as file |"
+                echo "+----------------------------------+"
+}
+function code(){
+                file=$2
+                if [[ -z ${file} ]];then
+                       echo -e "${red}Error: Must provide the filename, check help \`${0} -h/--help\`${end}"
+                       exit 127
+                fi
+                while read ip;do
+                        (if ping ${ip} -c 1 &> /dev/null ;then
+                                echo -e "${green}${ip}\t:\tAlive${end}"
+                        else
+                                echo -e "${red}${ip}\t:\tDead${end}"
+                                fi) &
+                done < ${file}
+                wait
+}
+case $1 in
+        "-h"|"--help")
+                help
+                exit
+                ;;
+        "-i")
+                code $@
+                ;;
+        *)
+                echo "Error: required one argument, check help"
+                help
+                exit 128
+                ;;
+esac
