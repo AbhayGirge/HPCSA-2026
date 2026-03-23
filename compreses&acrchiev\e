@@ -1,0 +1,45 @@
+
+
+Backup & Restore:
+``````````````````
+Archive 
+- tar 		[.tar]
+- gunzip	[.gz]
+
+tar + gunzip: .tgz
+
+Syntax:
+tar -attrib <new_backupfile>.tgz <orig_data_path>
+
+Create:
+```````
+tar -czvf backup.tgz /etc
+
+-c : create
+-z : gunzip 
+-v : verbose
+-f : Forcefully
+
+
+View:
+``````
+tar -tzvf backup.tgz
+
+-t: Tree view
+
+Restore/extract:
+`````````````````
+tar -xzvf backup.tgz [ extract in CWD ]
+tar -xzvf backup.tgz -C ooo/
+
+-C : create backup and path (where you want to extract) 
+_____________________________________
+
+
+
+🔗 Connect with Mr. Dheeraj Madhukar :
+YouTube: https://www.youtube.com/@DheerajMadhukar
+LinkedIn -  https://www.linkedin.com/in/dheerajtechnolegends/  
+X - https://x.com/Dheerajmadhukar 
+Medium -  https://medium.com/@dheerajkmadhukar  
+GitHub - https://github.com/Dheerajmadhukar
