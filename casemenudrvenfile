@@ -1,0 +1,45 @@
+#!/bin/bash
+read -p "
+        1. Make a file.
+        2. Display contents
+        3. Copy the file
+        4. Rename the file
+        5. Delete the file
+        6. Exit " menu
+
+if [[ ${menu} -eq 1 ]] ;then
+        read -p "Enter the file name : " fname
+        if [[ -e ${fname} ]] ;then
+                echo "file exists"
+        fi
+        if [[ ! -e ${fname} ]];then
+                echo "File doesnt exist"
+                echo "Enter the file content"
+                cat > ${fname} && echo ${menu}
+        fi
+
+fi
+
+if [[ ${menu} -eq 2 ]] ;then
+        read -p "Enter the file name : " fname
+        if [[ -e ${fname} ]] ;then
+                cat "${fname}"
+        fi
+        if [[ ! -e ${fname} ]];then
+                echo "File doesnt exist"
+                cat ${fname} && echo ${menu}
+        fi
+fi
+
+if [[ ${menu} -eq 3 ]];then
+read -p "Enter the Source file :" scr
+                read -p "Enter the Destination :" dn
+        if [[ -e ${src} ]] ;then
+               if [[ -e ${dn} ]] ;then
+                       cp -v "${src}" "${dn}"
+        fi
+
+                echo "Target file doesn't exists"
+                
+        fi 
+                                                                                                                                                                      1,11          Top
