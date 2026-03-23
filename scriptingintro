@@ -1,0 +1,167 @@
+SHELL/BASH Scripting:
+`````````````````````
+To execute multiple objects [cmds] using single object [file].
+
+extension: .bash or .sh
+
+To run:
+```````
+# bash script.sh
+OR
+# ./script.sh [to execute the script: chmod u+x file.sh]
+
+
+
+
+
+
+
+
+
+
+First line of script must be: [shebang]
+
+#! : shebang
+env: /bin/bash, /bin/sh
+
+
+
+
+
+
+
+
+
+++++++++++++++++++++++++++++-----
+# vim script.sh
+
+#!/bin/bash
+cmd1
+cmd2
+cmd3
+
+# bash script.sh
+...
+++++++++++++++++++++++++++++
+Variables:
+----------
+#!/bin/bash
+target="cdac.in"
+echo "My target is : ${target}"
+~~~~~~~~~
+
+#!/bin/bash
+read -p "Enter something: " target 
+echo "My target is : ${target}"
+
+
+
+
+
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~
+#!/bin/bash
+c_user=$(whoami)
+echo "User is ${c_user}"
+
+
+
+
+
+
+
+
+
+
+
+
+++++++++++++++++++++++++++++++++++++++++++
+#!/bin/bash
+read -p "Enter command: " a
+$a &> /dev/null
+echo "Exit Code: $?"
+
+
+
+
+
+
+
+
+
+
+Arithmetic:
+```````````
+#!/bin/bash
+x=10
+y=2
+
+echo $(($x + $y))
+echo $(($x - $y))
+echo $(($x * $y))
+echo $(($x / $y))
+----------
+#!/bin/bash
+expr 2 + 2
+expr 2 \* 2
+expr 2 - 2
+expr 2 / 2
+
+
+Debug:
+``````
+# bash -x script.sh
+++++++++++++++++++++++++++++++++++++++++++
+
+Conditions:
+```````````
+
+1) if...then...fi
+```````````````````````````````
+#!/bin/bash
+read -p "Enter : " a
+
+if [ "$a" -eq "1" ];then
+	echo "cool"
+fi
+
+2) if...then...else...fi
+````````````````````````````
+#!/bin/bash
+read -p "Enter : " a
+
+if [ "$a" -eq "1" ];then
+	echo "cool"
+else
+	echo "oops"
+fi
+
+3) if...then...elif...then...fi
+``````````````````````````````````
+#!/bin/bash
+read -p "Enter : " a
+
+if [ "$a" -eq "1" ];then
+	echo "cool"
+elif [ "$a" -eq "2" ];then
+	echo "sparta"
+fi
+
+
+4) if...then...elif...then...else...fi
+``````````````````````````````````````````
+#!/bin/bash
+read -p "Enter : " a
+
+if [ "$a" -eq "1" ];then
+	echo "cool"
+elif [ "$a" -eq "2" ];then
+	echo "sparta"
+else
+	echo "oops"
+fi
+
+----------------------
