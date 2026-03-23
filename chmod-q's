@@ -1,0 +1,17 @@
+Q. Create the following users, groups, and group memberships:
+- A group named admin
+sudo groupadd admin
+
+- A user harry who belongs to admin as a secondary group
+sudo useradd -G admin harry
+
+
+- A user natasha who also belongs to admin as a secondary group
+
+sudo useradd -G admin natasha
+
+- A user sarah who does not have access to an interactive shell on the system, and who is not a member of admin
+
+sudo useradd -s /bin/nologin sarah
+
+- harry, natasha, and sarah should all have the password of "password@123"
