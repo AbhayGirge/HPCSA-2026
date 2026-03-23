@@ -1,0 +1,10 @@
+#!/bin/bash
+
+c_count=$(utmpdump /var/log/wtmp 2>&1|grep -v 'mp dump of'|wc -l)
+while true; do
+a_count=$(utmpdump /var/log/wtmp 2>&1|grep -v 'mp dump of'|wc -l)
+if [[ ${a_count} -gt ${c_count} ]];then
+        utmpdump /var/log/wtmp | tail -1 | sed -e 's/\[//g' | awk '{print "USER:"$4"\n" "TTY:"$6"\n" "SRC IP:"$8"\n" "DST IP:"$10"\n"}'
+        ((c_count++))
+fi
+done
