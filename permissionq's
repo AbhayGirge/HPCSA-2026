@@ -1,0 +1,38 @@
+
+Q. You need to change the owner of a file named /tmp/exe from harry, who is a member of the users group, to natasha, who is a member of the editors group. Assuming you want to change both user and group owners, which command will do this?
+
+chown natasha /tmp/exe
+chgrp editors /tmp/exe
+
+
+
+
+
+
+
+
+
+Q. Your Linux system's umask variable is currently set to a value of 077. A user named 'jason' (who is a member of the users group) creates a dir named /tasks. What can users who are members of the users group do with this dir?
+
+700
+
+
+
+
+
+
+
+
+
+
+
+
+Q. Create a collaborative directory /common/adm with the following characteristics:
+
+-Group ownership of /common/adm is admin
+
+-The directory should be readable, writable, and accessible to members of admin, but not to any other user. (It is understood that root has access to all ﬁles and directories on the system.)
+
+mkdir -p /common/adm
+chgrp admin /common/adm
+chmod 070 /common/adm
