@@ -1,0 +1,56 @@
+
+
+
+OPENSSH:
+````````
+Secure Shell, it is used to access remote machine's on CLI.
+
+Package: openssh-server
+Port: 22
+Service: ssh
+
+
+ON SERVER:
+``````````
+
+1) Install SSH:
+```````````````
+$ sudo apt install openssh-server -y
+
+2) Start SSH Service:
+``````````````````````
+$ sudo systemctl <action> <service_name>
+
+systemctl: command is used to handle Linux services, like start, stop, status, restart etc...
+
+$ sudo systemctl start ssh
+$ sudo systemctl status ssh
+	OR
+$ sudo systemctl is-active ssh
+
+To enable this service in booting seq:
+
+$ sudo systemctl enable ssh
+
+To disabled this service in booting seq:
+
+$ sudo systemctl disable ssh
+
+3) To verify the port 22 is listening:
+```````````````````````````````````````
+$ sudo lsof -i:22
+
+
+ON CLIENT:
+``````````
+
+1) Install Client side package:
+
+$ sudo apt install openssh-client -y
+
+2) Access remote machine via ssh:
+`````````````````````````````````
+
+$ ssh x.x.x.x  [By default it will try to access 'root' on remote machine]
+
+$ ssh username@x.x.x.x
