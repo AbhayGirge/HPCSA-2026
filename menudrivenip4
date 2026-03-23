@@ -1,0 +1,57 @@
+#!/bin/bash
+red='\033[0;31m'
+green='\033[0;32m'
+end='\033[0m'
+function help(){
+                figlet "A C C I O" | lolcat
+                echo "+----------------------------------+"
+                echo "| -h/--help : help or usage        |"
+                echo "| -i FILENAME: Provide IPs as file |"
+                echo "+----------------------------------+"
+}
+function code(){
+        mapfile -t ips < ${i_file}
+        PIDS=()
+        JOBS=${c_tasks}
+                for i in ${!ips[@]};do
+                        (if ping -c 1 ${ips[${i}]} &> /dev/null;then
+                               echo "${ips[${i}]} is alive"
+                               fi) &
+                        #bash -c "${CMDS[$i]}" &
+                        PIDS+=("$!")
+                        echo "${PIDS} ${ips[$i]}"
+                if [[ ${#PIDS[@]} -ge ${JOBS} ]];then
+                        wait ${PID[@]}
+                PIDS=()
+                fi
+        done
+
+}
+for i in {1..3};do
+case $1 in
+        "-h"|"--help")
+                help
+                exit
+                ;;
+        "-i")
+                i_file=$2
+                ;;
+        "-o")
+                o_file=$2
+                ;;
+        "-c")
+                c_tasks=$2
+                ;;
+        *)
+                echo "Error: required one argument, check help"
+                help
+                exit 128
+                ;;
+esac
+shift 2
+done
+if [[ -z ${i_file} ]] && [[ -z ${o_file} ]] && [[ -z ${c_tasks} ]];then
+        echo "Error: arguments required, check help -h/--help"
+        exit 200
+fi
+code
