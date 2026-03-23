@@ -1,0 +1,44 @@
+#!/bin/bash
+cmd=(
+        "echo 'Sleeping for 15 sec' && sleep 15"
+        "echo 'Sleeping for 20 sec' && sleep 20"
+        "echo 'Sleeping for 25 sec' && sleep 25"
+        "echo 'Sleeping for 30 sec' && sleep 30"
+        "echo 'Sleeping for 36 sec' && sleep 36"
+        "echo 'Sleeping for 40 sec' && sleep 40"
+
+        )
+        pids=()
+
+code() {
+
+        #       for [[ $tnum=0;$tnum<i;$tnum++ ]];do
+        for i in ${!cmd[@]};do
+
+                pids+=("$!")
+                bash -c "${cmd[${i}]}" &
+              if [[ ${#pids[@]} -eq ${tnum} ]];then
+                    tnum=${tnum}+1
+                break
+                #bash -c "{cmd[${i}]}" &
+                fi
+        done
+        echo "Wating for PIDS: ${pids[@]}"
+        wait ${pids[@]}
+        echo "All tasks are done"
+}
+
+#total no. of tasks\
+#user no. of tasks compare
+case $1 in
+        "-c")
+                tnum=$2
+                #for i in ${!cmd[@]};do
+              #if [[ ${#pids[@]} == ${tnum} ]];then
+
+                      code
+                    #  pids+=("$!")
+
+              #fi
+              #wait
+wait
