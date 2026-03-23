@@ -1,0 +1,32 @@
+#!/bin/bash
+
+CMDS=(
+"echo 'Sleeping for 2 sec' && sleep 2"
+"echo 'Sleeping for 3 sec' && sleep 3"
+"echo 'Sleeping for 5 sec' && sleep 5"
+"echo 'Sleeping for 6 sec' && sleep 6"
+"echo 'Sleeping for 8 sec' && sleep 8")
+PIDS=()
+JOBS=$2
+case $1 in
+          "-c")
+                for i in ${!CMDS[@]};do
+                        bash -c "${CMDS[$i]}" &
+                        PIDS+=("$!")
+                        echo "${PIDS} ${CMDS[$i]}"
+                if [[ ${#PIDS[@]} -ge ${JOBS} ]];then
+                        wait ${PID[@]}
+                       # NEW_PIDS=()
+                       # for j in "${NEW_PIDS[@]}";do
+                       #         if kill -0 "$j" 2> /dev/null;then
+                       #                 NEW_PIDS+=(${j})
+                       #                         wait ${NEW_PID[@]}
+                       #         fi
+                       #         done
+                PIDS=()
+                fi
+        done
+        ;;
+esac
+wait ${PID[@]}
+echo "All tasks complete."
