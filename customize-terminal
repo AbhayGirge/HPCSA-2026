@@ -1,0 +1,68 @@
+Terminal Prompts:
+`````````````````
+PS1:(env variable)
+```````````````````
+To set PS1 var (for Current Working Env Only)
+PS1="dheeraj> "
+
+username@hostname:~$
+
+
+\u	The username of the current user.
+\h	The hostname (short name).
+\w	The current working directory (full path, ~ for home).
+\W	The basename of the current working directory (just the folder name).
+\t	The current time in 24-hour HH:MM:SS format.
+\d	The current date in "Weekday Month Day" format.
+\$	Displays $ for a regular user or # for the root user.
+
+
+PS1='┌─[\d]──[\u@\h:\w]\$ '
+
+ONLINE PROMPT GEN: https://bash-prompt-generator.org/
+
+
+https://emojidb.org/terminal-emojis
+
+
+
+username@hostname:~$
+
+function emo(){
+	if [[ $? -eq 0 ]];then
+		echo -n ""
+	else
+		echo -n ""
+	fi
+}
+PS1='┌─[\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m]\n└────╼ [emo] \$ '
+
+
+
+
+
+
+
+
+
+______________________________________
+https://github.com/ogham/exa
+
+$ mkdir exa/
+$ cd exa/
+$ wget https://github.com/ogham/exa/releases/download/v0.10.1/exa-linux-x86_64-v0.10.1.zip
+$ unzip exa-linux-x86_64-v0.10.1.zip
+$ cd bin/
+$ ls 
+exa
+$ cp -arfv exa /bin
+
+$ vim ~/.bashrc
+alias ls='exa -a -F --grid --header --octal-permissions --icons 2>/dev/null'
+
+:wq
+
+$ source ~/.bashrc
+
+$ ls
+___________________________________________
