@@ -1,0 +1,67 @@
+#!/bin/bash
+  2 red='\033[0;31m'
+  3 green='\033[0;32m'
+  4 end='\033[0m'
+  5 function help(){
+  6                 figlet "A C C I O" | lolcat
+  7                 echo "+----------------------------------+"
+  8                 echo "| -h/--help : help or usage        |"
+  9                 echo "| -i FILENAME: Provide IPs as file |"
+ 10                 echo "+----------------------------------+"
+ 11 }
+ 12 function code(){
+ 13         pid=()
+ 14                 while read ip;do
+ 15                         (if ping ${ip} -c 1 &> /dev/null ;then
+ 16                                 echo -e "${green}${ip}\t:\tAlive${end}"
+ 17                         else
+ 18                                 echo -e "${red}${ip}\t:\tDead${end}"
+ 19                                 fi) &
+ 20                                 pid+=("$!")
+ 21                 done < ${in_file}
+ 22                  }"
+ 23                 wait ${pid[@]}   }
+ 24 
+ 25 case $1 in
+ 26         "-h"|"--help")
+ 27                 help
+ 28                 exit
+ 29                 ;;
+ 30         "-i")
+ 31                 in_file=$2
+ 32                 if [[ -z ${in_file} ]] || [[ ! -f ${in_file} ]];then
+ 33                         echo "Error: no ip input found"
+ 34                         exit 127
+ 35                 fi
+ 36                 #3rd condition
+ 37                 if [[ ! -z $3 ]];then
+ 38                         case $3 in
+ 39                                 "-o")
+ 40                                         out_file=$4
+ 41                                         if [[ -z ${out_file} ]];then
+ 42                                                 echo "Error: no output found"
+ 43                                                 exit 127
+ 44                                         fi
+fi
+ 45                                         code $@ | tee ${out_file}
+ 46                                         ;;
+ 47                                 *)
+ 48                                         echo "Invalid argument"
+ 49                                         exit 127
+ 50                                         ;;
+ 51                         esac
+ 52                 else
+ 53                         code $@
+ 54                 fi
+ 55                 #if [[ -z ${file} ]];then
+ 56                 #       echo -e "${red}Error: Must provide the filename, check help \`${0} -h/--help\`${end}"
+ 57                 #       exit 127
+ 58                 #fi
+ 59                 ;;
+ 60         *)
+ 61                 echo "Error: required one argument, check help"
+ 62                 help
+ 63                 exit 128
+ 64                 ;;
+ 65 esac
+ 
