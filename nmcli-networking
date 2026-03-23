@@ -1,0 +1,34 @@
+Setting IP addresses
+
+nmcli connection show
+
+Set the IP and Netmask (CIDR):
+sudo nmcli connection modify "ens33" ipv4.addresses 192.168.1.100/24
+
+Set the Gateway:
+sudo nmcli connection modify "ens33" ipv4.gateway 192.168.1.1
+
+Set the DNS:
+sudo nmcli connection modify "ens33" ipv4.dns "8.8.8.8"
+
+Set method to Manual (Static):
+sudo nmcli connection modify "ens33" ipv4.method manual
+
+Restart the connection:
+sudo nmcli connection up "ens33"
+
+Check DNS:
+resolvectl status
+
+
+sudo nmcli connection modify "ens33" ipv4.method manual ipv4.addresses 192.168.1.100/24 ipv4.gateway 192.168.1.1 ipv4.dns "8.8.8.8" && sudo nmcli connection up "ens33"
+
+echo "nameserver 192.168.72.20" > /etc/resolv.conf
+
+sudo nmcli connection modify "ens33": Targets the connection profile named "ens33".
+ipv4.method manual: Sets the IP to Static (Manual).
+ipv4.addresses 192.168.1.100/24: Sets the IP and CIDR netmask.
+ipv4.gateway 192.168.1.1: Sets the Gateway.
+ipv4.dns "8.8.8.8": Sets the DNS server.
+&&: This Linux operator runs the next command only if the previous one succeeded.
+sudo nmcli connection up "ens33": Restarts the connection to apply the changes immediately.
